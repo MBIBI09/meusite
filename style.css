@@ -1,0 +1,191 @@
+/* ECHO STUDIOS: estilos do site. As cores e a fonte ficam no bloco :root, logo abaixo. */
+
+/* ============ CORES E TAMANHOS: edite aqui ============ */
+:root{
+  --preto:#000;
+  --branco:#fff;
+  --cinza-claro:#f0f0f0;   /* fundo de faixas claras */
+  --cinza-texto:#4d4d4d;   /* texto secundário sobre branco */
+  --cinza-texto-escuro:#c8c8c8; /* texto secundário sobre preto */
+  --fonte:'Manrope', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  --largura:1120px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:112.5%} /* 18px de base: leitura confortável para todas as idades */
+body{font-family:var(--fonte);background:var(--branco);color:var(--preto);line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.container{width:min(var(--largura),100% - 3rem);margin-inline:auto}
+
+/* Acessibilidade: foco visível e link para pular o menu */
+:focus-visible{outline:4px solid #888;outline-offset:3px}
+.escuro :focus-visible{outline-color:#fff}
+.pular{position:absolute;left:-999px;top:0;background:var(--branco);color:var(--preto);padding:.8rem 1.2rem;font-weight:700;z-index:100}
+.pular:focus{left:1rem;top:1rem}
+
+
+/* ============ MENU ============ */
+header{background:var(--preto);color:var(--branco);position:sticky;top:0;z-index:50;border-bottom:1px solid #2a2a2a}
+.menu{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 0;flex-wrap:wrap}
+.logo{font-weight:800;letter-spacing:.04em;text-decoration:none;font-size:1.1rem}
+nav ul{list-style:none;display:flex;gap:1.6rem;flex-wrap:wrap}
+nav a{text-decoration:none;font-weight:500;padding:.3rem 0;border-bottom:2px solid transparent}
+nav a:hover{border-bottom-color:var(--branco)}
+
+/* ============ BOTÕES ============ */
+.botao{display:inline-block;font:inherit;font-weight:700;text-decoration:none;padding:1rem 1.8rem;border:2px solid var(--branco);background:var(--branco);color:var(--preto);border-radius:999px;transition:background .2s,color .2s}
+.botao:hover{background:transparent;color:var(--branco)}
+.botao.vazado{background:transparent;color:var(--branco)}
+.botao.vazado:hover{background:var(--branco);color:var(--preto)}
+.claro .botao{border-color:var(--preto);background:var(--preto);color:var(--branco)}
+.claro .botao:hover{background:transparent;color:var(--preto)}
+
+/* ============ SEÇÕES ============ */
+section{padding:clamp(4rem,9vw,7rem) 0}
+.escuro{background:var(--preto);color:var(--branco)}
+.claro{background:var(--branco);color:var(--preto)}
+.cinza{background:var(--cinza-claro);color:var(--preto)}
+h2{font-size:clamp(2rem,5vw,3.4rem);line-height:1.1;font-weight:800;letter-spacing:-.02em;margin-bottom:1.5rem;max-width:18ch}
+h3{font-size:1.35rem;font-weight:800;line-height:1.25}
+p{max-width:62ch}
+.suave{color:var(--cinza-texto)}
+.escuro .suave{color:var(--cinza-texto-escuro)}
+
+/* ============ HERÓI: logo centralizada sobre a foto do estúdio ============ */
+.heroi{position:relative;isolation:isolate;min-height:calc(100vh - 72px);min-height:calc(100svh - 72px);display:grid;place-items:center;text-align:center;padding:4rem 0;overflow:hidden;background:var(--preto)}
+/* Foto de fundo em preto e branco. Para trocar, mude o nome em url("studios.jpg") */
+.heroi::before{content:"";position:absolute;inset:0;z-index:-2;background:url("studios.jpg") center/cover no-repeat;filter:grayscale(1) contrast(1.1)}
+/* Camada escura por cima da foto, para o texto ficar bem legível. Aumente os números (.6 e .82) para escurecer mais */
+.heroi::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.82))}
+.heroi .container{display:flex;flex-direction:column;align-items:center}
+.logo-grande{width:min(780px,100%);height:auto;margin-bottom:1.5rem}
+.heroi .frase{font-size:clamp(1.25rem,2.8vw,1.8rem);font-weight:500;line-height:1.4;max-width:30ch;margin:0 auto 2rem}
+.acoes{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* Os ecos da logo ficam deslocados; ao carregar a página, eles se abrem a partir da letra principal */
+.logo-grande .e1{transform:translate(24px,24px)}
+.logo-grande .e2{transform:translate(16px,16px)}
+.logo-grande .e3{transform:translate(8px,8px)}
+@media (prefers-reduced-motion:no-preference){
+  .logo-grande .e1,.logo-grande .e2,.logo-grande .e3{animation:abre 1.4s .2s cubic-bezier(.2,.8,.2,1) backwards}
+  @keyframes abre{from{transform:translate(0,0);opacity:0}}
+}
+
+/* ============ OBJETIVO ============ */
+.objetivo{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,5rem);align-items:start}
+.pontos{list-style:none;display:grid;gap:1.6rem}
+.pontos li{padding-left:1.4rem;border-left:4px solid var(--preto)}
+.pontos strong{display:block;font-size:1.25rem;margin-bottom:.2rem}
+
+/* ============ AULAS (lista em linhas, não em cartões) ============ */
+.aulas{list-style:none;margin-top:2.5rem;border-top:1px solid #444}
+.aulas li{display:grid;grid-template-columns:minmax(150px,1fr) 2fr;gap:1.5rem;padding:1.8rem 0;border-bottom:1px solid #444;align-items:baseline}
+.aulas .idade{font-weight:700}
+.aulas p{color:var(--cinza-texto-escuro)}
+
+/* ============ FOTO DO SALÃO ============ */
+.espaco{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
+.foto{aspect-ratio:3/4;background:#111;border-radius:20px;overflow:hidden}
+/* Para ver a foto colorida, apague "filter:grayscale(1) contrast(1.05)" na linha abaixo */
+.foto img{width:100%;height:100%;object-fit:cover;object-position:center 35%;filter:grayscale(1) contrast(1.05)}
+
+/* ============ GALERIA ============ */
+.galeria{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1rem;margin-top:2.5rem}
+.galeria .item{padding:0;border:0;background:#111;border-radius:16px;overflow:hidden;cursor:zoom-in;aspect-ratio:4/3}
+.galeria img{width:100%;height:100%;object-fit:cover;filter:grayscale(1);transition:transform .4s,filter .4s}
+.galeria .item:hover img{transform:scale(1.04);filter:grayscale(0)}
+.video{margin-top:2.5rem;border-radius:16px;overflow:hidden;background:#111}
+.video video{display:block;width:100%;height:auto;aspect-ratio:720/406;filter:grayscale(1);transition:filter .4s}
+.video:hover video,.video:focus-within video{filter:none}
+.lightbox{border:0;background:var(--preto);color:var(--branco);width:min(96vw,1000px);max-height:96vh;margin:auto;padding:1rem;border-radius:16px}
+.lightbox::backdrop{background:rgba(0,0,0,.92)}
+.lightbox img{width:100%;max-height:72vh;object-fit:contain;border-radius:10px}
+.lightbox .leg{margin:.8rem 0 1rem;color:var(--cinza-texto-escuro);text-align:center}
+.lightbox .controles{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
+
+/* ============ DEPOIMENTOS ============ */
+.depoimentos .dep{margin:2rem 0 0}
+.depoimentos blockquote{font-size:clamp(1.4rem,3.4vw,2.3rem);font-weight:700;line-height:1.35;max-width:32ch;letter-spacing:-.01em}
+.depoimentos figcaption{margin-top:1.4rem;font-weight:500}
+.depoimentos .passos{display:flex;align-items:center;gap:1rem;margin-top:2.5rem;flex-wrap:wrap}
+.depoimentos .contador{font-weight:700;min-width:5ch}
+.botao-pequeno{font:inherit;font-weight:700;cursor:pointer;padding:.8rem 1.4rem;border-radius:999px;border:2px solid var(--preto);background:transparent;color:var(--preto);transition:background .2s,color .2s}
+.botao-pequeno:hover{background:var(--preto);color:var(--branco)}
+.lightbox .botao-pequeno{border-color:var(--branco);color:var(--branco)}
+.lightbox .botao-pequeno:hover{background:var(--branco);color:var(--preto)}
+
+/* ============ HORÁRIOS E WHATSAPP ============ */
+.estilos{list-style:none;margin-top:3rem;display:flex;flex-wrap:wrap;gap:.4rem 2.2rem}
+.estilos li{font-size:clamp(2rem,6vw,4rem);font-weight:800;letter-spacing:-.02em;line-height:1.15}
+.horarios-nota strong{color:var(--branco)}
+.horarios{margin-top:3rem;display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.horarios .bloco{border:2px solid var(--branco);border-radius:16px;padding:1.5rem}
+.horarios .periodo{font-weight:500;color:var(--cinza-texto-escuro)}
+.horarios .hora{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;line-height:1.2}
+.horarios-nota{margin-top:1.5rem}
+.whatsapp{position:fixed;right:1.2rem;bottom:1.2rem;z-index:60;font:inherit;font-weight:700;text-decoration:none;padding:.9rem 1.4rem;border-radius:999px;background:var(--branco);color:var(--preto);border:2px solid var(--preto);box-shadow:0 6px 24px rgba(0,0,0,.45);transition:background .2s,color .2s}
+.whatsapp:hover{background:var(--preto);color:var(--branco);border-color:var(--branco)}
+
+/* ============ GRADE SEMANAL (com filtro por estilo) ============ */
+.grade{margin-top:3rem}
+.filtros{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.2rem 0 1.5rem}
+.filtro{font:inherit;font-weight:700;cursor:pointer;padding:.7rem 1.2rem;border-radius:999px;border:2px solid var(--branco);background:transparent;color:var(--branco);transition:background .2s,color .2s}
+.filtro:hover{background:#262626}
+.filtro[aria-pressed="true"]{background:var(--branco);color:var(--preto)}
+
+.dias{list-style:none;border-top:1px solid #444}
+.dias>li{display:grid;grid-template-columns:140px 1fr;gap:1rem;padding:1.2rem 0;border-bottom:1px solid #444;align-items:start}
+.dias h4{font-size:1.15rem;font-weight:800;padding-top:.6rem}
+.turmas{display:flex;flex-wrap:wrap;gap:.7rem}
+.turma{display:grid;gap:.1rem;min-width:12rem;padding:.8rem 1.1rem;border-radius:14px;border:2px solid var(--branco);text-decoration:none;transition:opacity .2s,background .2s,color .2s}
+.turma strong{font-size:1.05rem}
+.turma span{font-size:.9rem;color:var(--cinza-texto-escuro)}
+.turma:hover{background:var(--branco);color:var(--preto)}
+.turma:hover span{color:#333}
+.turma.apagada{opacity:.25}
+
+/* ============ PERGUNTAS FREQUENTES ============ */
+.faq{margin-top:2rem;border-top:1px solid #bdbdbd}
+.faq details{border-bottom:1px solid #bdbdbd;padding:1.3rem 0}
+.faq summary{cursor:pointer;font-weight:800;font-size:1.25rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:1.8rem;line-height:1}
+.faq details[open] summary::after{content:"\2212"}
+.faq details p{margin-top:.8rem;color:var(--cinza-texto)}
+
+/* ============ FORMULÁRIO DE AULA EXPERIMENTAL ============ */
+.experimental{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,5rem);align-items:start}
+.form{display:grid;gap:1.4rem}
+.campo{display:grid;gap:.4rem}
+.campo label{font-weight:700}
+.campo .opc{font-weight:400;color:var(--cinza-texto-escuro)}
+.campo input,.campo select,.campo textarea{font:inherit;width:100%;padding:1rem 1.1rem;background:var(--branco);color:var(--preto);border:2px solid var(--branco);border-radius:12px}
+.campo textarea{min-height:7rem;resize:vertical}
+.form .botao{justify-self:start;cursor:pointer}
+.form .nota{font-size:.95rem;color:var(--cinza-texto-escuro)}
+.escondido{display:none}
+
+/* ============ CONTATO ============ */
+.contato{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,5rem);align-items:start}
+.canais{display:grid;gap:2rem}
+.canais dt{font-weight:700;margin-bottom:.2rem}
+.canais a{font-size:clamp(1.2rem,3vw,1.7rem);font-weight:800;text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:2px;word-break:break-all}
+.canais a:hover{text-decoration-thickness:5px}
+
+footer{background:var(--preto);color:var(--cinza-texto-escuro);padding:2rem 0;border-top:1px solid #2a2a2a;font-size:.95rem}
+.rodape{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+
+/* ============ CELULAR ============ */
+@media (max-width:760px){
+  .objetivo,.contato,.espaco,.experimental{grid-template-columns:1fr}
+  .aulas li{grid-template-columns:1fr;gap:.4rem}
+  .foto{aspect-ratio:4/5}
+  nav ul{gap:1.1rem}
+  header{position:static}
+  .whatsapp{right:.8rem;bottom:.8rem;padding:.7rem 1.1rem;font-size:.9rem}
+  .dias>li{grid-template-columns:1fr;gap:.3rem}
+  .dias h4{padding-top:0}
+  .turma{min-width:0;flex:1 1 9.5rem}
+}

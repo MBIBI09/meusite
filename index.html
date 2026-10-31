@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ECHO STUDIOS | Dança para todas as idades e todos os bolsos</title>
+<meta name="description" content="ECHO STUDIOS: estúdio de dança com aulas acessíveis para todas as idades e para todos os bolsos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="escuro">
+  <div class="container menu">
+    <a class="logo" href="#topo">ECHO STUDIOS</a>
+    <nav aria-label="Menu principal">
+      <ul>
+        <li><a href="#objetivo">Nosso objetivo</a></li>
+        <li><a href="#aulas">Aulas</a></li>
+        <li><a href="#espaco">O espaço</a></li>
+        <li><a href="#experimental">Aula experimental</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  <!-- ===== HERÓI ===== -->
+  <section class="heroi escuro" id="topo">
+    <div class="container">
+      <h1 class="sr-only">ECHO STUDIOS</h1>
+      <!-- Logo em SVG: as letras são traços, então não dependem de fonte -->
+      <svg class="logo-grande" viewBox="-6 -6 443 190" aria-hidden="true" focusable="false">
+        <defs>
+          <g id="echo" fill="none">
+            <path d="M70 10H10V90H70M10 50H62"/>
+            <path transform="translate(94)" d="M78.3 21.7A40 40 0 1 0 78.3 78.3"/>
+            <path transform="translate(203)" d="M10 0V100M70 0V100M10 50H70"/>
+            <circle cx="357" cy="50" r="40"/>
+          </g>
+          <g id="studios" fill="none" stroke-width="5">
+            <path d="M22 2.5H2.5V14H19.5V25.5H0"/>
+            <path transform="translate(65.5)" d="M0 2.5H22M11 2.5V28"/>
+            <path transform="translate(131)" d="M2.5 0V25.5H19.5V0"/>
+            <path transform="translate(196.5)" d="M2.5 2.5H10.5A11.5 11.5 0 0 1 10.5 25.5H2.5Z"/>
+            <path transform="translate(265)" d="M2.5 0V28"/>
+            <circle cx="327.5" cy="14" r="11.5"/>
+            <path transform="translate(385)" d="M22 2.5H2.5V14H19.5V25.5H0"/>
+          </g>
+        </defs>
+        <use class="e1" href="#echo" stroke="#3a3a3a" stroke-width="20"/>
+        <use class="e2" href="#echo" stroke="#666" stroke-width="20"/>
+        <use class="e3" href="#echo" stroke="#999" stroke-width="20"/>
+        <use href="#echo" stroke="#fff" stroke-width="20"/>
+        <use href="#studios" transform="translate(0 150)" stroke="#fff"/>
+      </svg>
+      <p class="frase">Dança para todas as idades. Para todos os bolsos.</p>
+      <div class="acoes">
+        <a class="botao" href="#experimental">Quero dançar</a>
+        <a class="botao vazado" href="#aulas">Ver as aulas</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OBJETIVO ===== -->
+  <section class="claro" id="objetivo">
+    <div class="container objetivo">
+      <div>
+        <h2>Dançar não deveria ter idade nem preço de luxo.</h2>
+        <p class="suave">No ECHO STUDIOS, o nosso objetivo é simples: abrir as portas da dança para todo mundo. Qualquer idade, qualquer nível, qualquer orçamento.</p>
+      </div>
+      <ul class="pontos">
+        <li>
+          <strong>Para todas as idades</strong>
+          Crianças, jovens, adultos e a melhor idade dançam juntos, cada um no seu ritmo.
+        </li>
+        <li>
+          <strong>Para todos os bolsos</strong>
+          Mensalidades a partir de <strong>R$&nbsp;109,99</strong> porque o dinheiro não deve ser a razão de alguém ficar de fora.
+        </li>
+        <li>
+          <strong>Para quem nunca dançou</strong>
+          Não precisa de experiência. Você chega do jeito que está e a gente começa daí.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== AULAS ===== -->
+  <section class="escuro" id="aulas">
+    <div class="container">
+      <h2>Uma aula para cada fase da vida.</h2>
+      <p class="suave">Todos os tipos de aulas, para todos os públicos.</p>
+      <ul class="aulas">
+        <li>
+          <h3>Crianças <span class="idade suave">(4 a 11 anos)</span></h3>
+          <p>Movimento, música e brincadeira para desenvolver coordenação, confiança e amizades.</p>
+        </li>
+        <li>
+          <h3>Jovens <span class="idade suave">(12 a 17 anos)</span></h3>
+          <p>Estilos urbanos e contemporâneos para se expressar e ganhar presença.</p>
+        </li>
+        <li>
+          <h3>Adultos <span class="idade suave">(18 a 59 anos)</span></h3>
+          <p>Aulas leves para tirar o estresse da semana, mexer o corpo e se divertir.</p>
+        </li>
+        <li>
+          <h3>Melhor idade <span class="idade suave">(60+)</span></h3>
+          <p>Dança com cuidado e sem pressa, para manter o corpo ativo, a mente alerta e a vida social em dia.</p>
+        </li>
+      </ul>
+
+      <!-- Estilos de dança: troque, apague ou copie uma linha <li> para mudar a lista -->
+      <ul class="estilos" aria-label="Estilos de dança">
+        <li>Hip hop</li>
+        <li>Dança de salão</li>
+        <li>K-pop</li>
+        <li>Pop</li>
+        <li>Baby ballet</li>
+        <li>Jazz</li>
+      </ul>
+
+      <!-- Grade semanal de EXEMPLO: troque estilos, idades, dias e horários pelos reais. Cada <a class="turma"> é uma turma; data-estilo precisa ser: hiphop, salao, kpop ou pop. No máximo duas turmas por dia -->
+      <div class="grade">
+        <h3>Grade semanal</h3>
+        <p class="suave">Escolha um estilo para destacar as turmas. Clique em uma turma para pedir a aula experimental.</p>
+
+        <div class="filtros" role="group" aria-label="Filtrar turmas por estilo">
+          <button class="filtro" type="button" data-estilo="todos" aria-pressed="true">Todos</button>
+          <button class="filtro" type="button" data-estilo="hiphop" aria-pressed="false">Hip hop</button>
+          <button class="filtro" type="button" data-estilo="salao" aria-pressed="false">Dança de salão</button>
+          <button class="filtro" type="button" data-estilo="kpop" aria-pressed="false">K-pop</button>
+          <button class="filtro" type="button" data-estilo="pop" aria-pressed="false">Pop</button>
+        </div>
+
+        <ul class="dias">
+          <li>
+            <h4>Segunda</h4>
+            <div class="turmas">
+              <a class="turma" href="#experimental" data-estilo="salao"><strong>Dança de salão</strong><span>Melhor idade</span><span>9:00 às 11:00</span></a>
+              <a class="turma" href="#experimental" data-estilo="hiphop"><strong>Hip hop</strong><span>Jovens</span><span>18:30 às 20:30</span></a>
+            </div>
+          </li>
+          <li>
+            <h4>Terça</h4>
+            <div class="turmas">
+              <a class="turma" href="#experimental" data-estilo="pop"><strong>Pop</strong><span>Crianças</span><span>15:00 às 17:00</span></a>
+              <a class="turma" href="#experimental" data-estilo="kpop"><strong>K-pop</strong><span>Jovens</span><span>18:30 às 20:30</span></a>
+            </div>
+          </li>
+          <li>
+            <h4>Quarta</h4>
+            <div class="turmas">
+              <a class="turma" href="#experimental" data-estilo="hiphop"><strong>Hip hop</strong><span>Crianças</span><span>15:00 às 17:00</span></a>
+              <a class="turma" href="#experimental" data-estilo="salao"><strong>Dança de salão</strong><span>Adultos</span><span>18:30 às 20:30</span></a>
+            </div>
+          </li>
+          <li>
+            <h4>Quinta</h4>
+            <div class="turmas">
+              <a class="turma" href="#experimental" data-estilo="pop"><strong>Pop</strong><span>Adultos</span><span>9:00 às 11:00</span></a>
+              <a class="turma" href="#experimental" data-estilo="kpop"><strong>K-pop</strong><span>Jovens</span><span>18:30 às 20:30</span></a>
+            </div>
+          </li>
+          <li>
+            <h4>Sexta</h4>
+            <div class="turmas">
+              <a class="turma" href="#experimental" data-estilo="kpop"><strong>K-pop</strong><span>Crianças</span><span>15:00 às 17:00</span></a>
+              <a class="turma" href="#experimental" data-estilo="pop"><strong>Pop</strong><span>Adultos</span><span>18:30 às 20:30</span></a>
+            </div>
+          </li>
+          <li>
+            <h4>Sábado</h4>
+            <div class="turmas">
+              <a class="turma" href="#experimental" data-estilo="salao"><strong>Dança de salão</strong><span>Todas as idades</span><span>9:00 às 11:00</span></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <p class="horarios-nota suave"><strong>Todas as turmas aceitam iniciantes.</strong> Os valores são combinados depois da ficha de inscrição.</p>
+    </div>
+  </section>
+
+  <!-- ===== FOTO DO SALÃO ===== -->
+  <section class="cinza" id="espaco">
+    <div class="container espaco">
+      <div>
+        <h2>Um salão feito para dançar.</h2>
+        <p class="suave">Espaço amplo, espelhos, piso adequado e um ambiente acolhedor, onde cada pessoa dança no seu ritmo.</p>
+      </div>
+      <div class="foto">
+        <!-- A foto fica na mesma pasta deste arquivo. Para trocar, mude o nome em src -->
+        <img src="echos.jpg" alt="Grupo dançando junto no salão do ECHO STUDIOS" width="736" height="981">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALERIA ===== -->
+  <section class="escuro" id="galeria">
+    <div class="container">
+      <h2>Veja o ECHO STUDIOS por dentro.</h2>
+      <p class="suave">Veja a galeria de fotos e clique em uma imagem para ver em tela grande.</p>
+
+      <!-- Vídeo: troque "video-aula.mp4" e a capa "video-aula-capa.jpg" pelos seus arquivos (na mesma pasta do index.html) -->
+
+
+      <div class="galeria">
+        <!-- Para adicionar uma foto: copie um bloco <button> inteiro, cole abaixo e troque src e alt. A foto precisa estar na mesma pasta do index.html -->
+        <button class="item" type="button"><img src="echos.jpg" alt="Grupo dançando junto no salão do ECHO STUDIOS" width="736" height="981" loading="lazy"></button>
+        <button class="item" type="button"><img src="echostudiios.jpg" alt="Alunos conversando e se preparando para a aula no salão, com janelas grandes e luz quente" width="736" height="981" loading="lazy"></button>
+        <button class="item" type="button"><img src="studios.jpg" alt="Salão amplo do ECHO STUDIOS, com piso de madeira e janelas grandes" width="735" height="417" loading="lazy"></button>
+        <button class="item" type="button"><img src="dancestudios.jpg" alt="Alunos se preparando para uma aula de dança no ECHO STUDIOS" width="735" height="417" loading="lazy"></button>
+      </div>
+    </div>
+
+    <dialog class="lightbox" id="lightbox" aria-label="Foto ampliada">
+      <img src="" alt="">
+      <p class="leg"></p>
+      <div class="controles">
+        <button class="botao-pequeno" type="button" data-acao="anterior">Anterior</button>
+        <button class="botao-pequeno" type="button" data-acao="fechar">Fechar</button>
+        <button class="botao-pequeno" type="button" data-acao="proxima">Próxima</button>
+      </div>
+    </dialog>
+  </section>
+
+  <!-- ===== DEPOIMENTOS ===== -->
+  <section class="claro depoimentos" id="depoimentos">
+    <div class="container">
+      <h2>Quem dança com a gente.</h2>
+      <div id="deps" aria-live="polite">
+        <!-- TROQUE os textos abaixo por depoimentos reais (com a autorização da pessoa). Para adicionar outro, copie um bloco <figure> inteiro. -->
+        <figure class="dep">
+          <blockquote>Acho o Echo Studios muito legal! As músicas das aulas de Hip Hop são as melhores e os passos são bem modernos. Fiz muitos amigos novos aqui e o professor ensina a gente a criar nossas próprias coreografias. Apresentar no festival no final do ano foi a parte mais divertida!</blockquote>
+          <figcaption>Lucas, 10 anos</figcaption>
+        </figure>
+        <figure class="dep" hidden>
+          <blockquote>A minha filha de 5 anos ama as aulas no Echo Studios! Antes ela era super tímida, mas a professora de Baby Ballet tem uma paciência incrível e deixa tudo parecendo uma brincadeira. A Sophia passa a semana toda perguntando quando vai ser o dia da próxima aula. O estúdio é super acolhedor e seguro!</blockquote>
+          <figcaption>Mariana, mãe de Sophia</figcaption>
+        </figure>
+        <figure class="dep" hidden>
+          <blockquote>Comecei a fazer Dança de Salão no Echo Studios para me manter em movimento e acabou sendo a melhor decisão da minha semana. O ambiente é muito respeitoso, alegre e inclusivo para todas as idades. Não importa se você nunca dançou na vida, os professores fazem você se sentir confiante desde a primeira aula.</blockquote>
+          <figcaption>D. Helena, 58 anos</figcaption>
+        </figure>
+      </div>
+      <div class="passos">
+        <button class="botao-pequeno" type="button" id="dep-anterior">Anterior</button>
+        <span class="contador" id="dep-contador" aria-hidden="true"></span>
+        <button class="botao-pequeno" type="button" id="dep-proximo">Próximo</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PERGUNTAS FREQUENTES ===== -->
+  <section class="cinza" id="duvidas">
+    <div class="container">
+      <h2>Perguntas frequentes.</h2>
+      <div class="faq">
+        <!-- Para adicionar uma pergunta, copie um bloco <details> inteiro -->
+        <details>
+          <summary>Preciso ter experiência para dançar?</summary>
+          <p>Não. Todas as turmas aceitam iniciantes, e cada pessoa dança no seu ritmo.</p>
+        </details>
+        <details>
+          <summary>Qual turma é indicada para a minha idade?</summary>
+          <p>Temos turmas para crianças, jovens, adultos e a melhor idade. Se ficar em dúvida, fale com a gente pelo WhatsApp.</p>
+        </details>
+        <details>
+          <summary>Como funciona a aula experimental?</summary>
+          <p>Você preenche o formulário logo abaixo, entramos em contato e combinamos o melhor dia e horário para você.</p>
+        </details>
+        <details>
+          <summary>Quanto custa?</summary>
+          <p>As mensalidades começam em R$&nbsp;109,99 porque nossa proposta é ser econômica, para todos os bolsos.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AULA EXPERIMENTAL ===== -->
+  <section class="escuro" id="experimental">
+    <div class="container experimental">
+      <div>
+        <h2>Venha fazer uma aula experimental.</h2>
+        <p class="suave">Preencha o formulário e entraremos em contato para combinar o melhor dia e horário para você. Não precisa ter experiência.</p>
+      </div>
+
+      <!-- O formulário envia as respostas para o e-mail do estúdio através do serviço gratuito FormSubmit -->
+      <form class="form" action="https://formsubmit.co/echostudios@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Novo pedido de aula experimental - ECHO STUDIOS">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <!-- Campo escondido contra robôs: não apague -->
+        <input type="text" name="_honey" class="escondido" tabindex="-1" autocomplete="off">
+
+        <div class="campo">
+          <label for="nome">Seu nome</label>
+          <input type="text" id="nome" name="Nome" autocomplete="name" required>
+        </div>
+
+        <div class="campo">
+          <label for="faixa">Quem vai dançar?</label>
+          <select id="faixa" name="Faixa de idade" required>
+            <option value="" selected disabled>Escolha uma opção</option>
+            <option>Criança (4 a 11 anos)</option>
+            <option>Jovem (12 a 17 anos)</option>
+            <option>Adulto (18 a 59 anos)</option>
+            <option>Melhor idade (60 anos ou mais)</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="telefone">Telefone ou WhatsApp</label>
+          <input type="tel" id="telefone" name="Telefone" autocomplete="tel" inputmode="tel" required>
+        </div>
+
+        <div class="campo">
+          <label for="email">E-mail <span class="opc">(opcional)</span></label>
+          <input type="email" id="email" name="E-mail" autocomplete="email">
+        </div>
+
+        <div class="campo">
+          <label for="mensagem">Quer nos contar algo? <span class="opc">(opcional)</span></label>
+          <textarea id="mensagem" name="Mensagem"></textarea>
+        </div>
+
+        <button class="botao" type="submit">Pedir minha aula experimental</button>
+        <p class="nota">Usamos seus dados apenas para entrar em contato sobre a aula.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== CONTATO ===== -->
+  <section class="claro" id="contato">
+    <div class="container contato">
+      <div>
+        <h2>Vamos dançar juntos?</h2>
+        <p class="suave">Venha dançar com a gente. Peça sua aula experimental ou escreva para nós. Respondemos com carinho.</p>
+        <a class="botao" href="#experimental" style="margin-top:1.5rem">Pedir aula experimental</a>
+      </div>
+      <dl class="canais">
+        <div>
+          <dt>E-mail</dt>
+          <dd><a href="mailto:echostudios@gmail.com">echostudios@gmail.com</a></dd>
+          <dd class="suave" style="font-size:.95rem;margin-top:.5rem">Profissional de dança e quer fazer parte da equipe? Escreva para este mesmo e-mail.</dd>
+        </div>
+        <div>
+          <dt>Instagram</dt>
+          <dd><a href="https://www.instagram.com/echostudios.br" target="_blank" rel="noopener">@echostudios</a></dd>
+        </div>
+        <div>
+          <dt>Onde fica</dt>
+          <!-- ENDEREÇO DE EXEMPLO: troque o texto abaixo e o trecho "query=..." do link do mapa pelo endereço real (use + no lugar de espaços) -->
+          <dd class="endereco">Rod. Pref.Casemiro Teixeira, s/n - Três Barras, 11920-000 &middot; Iguape - SP</dd>
+          <dd class="suave" style="font-size:.95rem;margin-top:.3rem">Aulas de segunda a sábado, conforme a grade semanal.</dd>
+          <dd style="margin-top:.6rem"><a class="link-mapa" href="https://www.google.com/maps/place/Etec+Engenheiro+Agrônomo+Narciso+de+Medeiros/@-24.6711605,-47.5462716,17z/data=!3m1!4b1!4m6!3m5!1s0x94daa1a0cc4d5d3f:0xb6abdf69b4e73124!8m2!3d-24.6711605!4d-47.5462716!16s%2Fg%2F1tj7xjgf?entry=ttu&g_ep=EgoyMDI2MTAyMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Ver no mapa</a></dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container rodape">
+    <span>© 2026 ECHO STUDIOS. Dança para todos.</span>
+    <a href="mailto:echostudios@gmail.com">echostudios@gmail.com</a>
+  </div>
+</footer>
+
+<!-- Botão de WhatsApp: troque 5500000000000 pelo número real (55 + DDD + número, só dígitos) -->
+<a class="whatsapp" href="https://wa.me/5500000000000?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20ECHO%20STUDIOS." target="_blank" rel="noopener">Falar no WhatsApp</a>
+
+<script>
+/* ECHO STUDIOS: interações do site (foto ampliada na galeria, depoimentos e filtro da grade). */
+
+/* ===== Galeria: foto ampliada ===== */
+(function(){
+  var itens=[].slice.call(document.querySelectorAll('.galeria .item'));
+  var dlg=document.getElementById('lightbox');
+  if(!itens.length||!dlg) return;
+  var img=dlg.querySelector('img'), leg=dlg.querySelector('.leg'), atual=0;
+  function mostrar(i){
+    atual=(i+itens.length)%itens.length;
+    var f=itens[atual].querySelector('img');
+    img.src=f.getAttribute('src'); img.alt=f.alt; leg.textContent=f.alt;
+  }
+  itens.forEach(function(b,i){b.addEventListener('click',function(){mostrar(i);dlg.showModal();});});
+  dlg.addEventListener('click',function(e){
+    var a=e.target.getAttribute&&e.target.getAttribute('data-acao');
+    if(a==='proxima') mostrar(atual+1);
+    else if(a==='anterior') mostrar(atual-1);
+    else if(a==='fechar'||e.target===dlg) dlg.close();
+  });
+  dlg.addEventListener('keydown',function(e){
+    if(e.key==='ArrowRight') mostrar(atual+1);
+    if(e.key==='ArrowLeft') mostrar(atual-1);
+  });
+})();
+
+/* ===== Depoimentos: um de cada vez, sem troca automática ===== */
+(function(){
+  var deps=[].slice.call(document.querySelectorAll('#deps .dep'));
+  var cont=document.getElementById('dep-contador'), atual=0;
+  if(!deps.length) return;
+  function mostrar(i){
+    atual=(i+deps.length)%deps.length;
+    deps.forEach(function(d,n){d.hidden=(n!==atual);});
+    cont.textContent=(atual+1)+' de '+deps.length;
+  }
+  document.getElementById('dep-anterior').addEventListener('click',function(){mostrar(atual-1);});
+  document.getElementById('dep-proximo').addEventListener('click',function(){mostrar(atual+1);});
+  mostrar(0);
+})();
+
+/* ===== Grade semanal: filtro por estilo ===== */
+(function(){
+  var botoes=[].slice.call(document.querySelectorAll('.filtro'));
+  var turmas=[].slice.call(document.querySelectorAll('.turma'));
+  botoes.forEach(function(b){
+    b.addEventListener('click',function(){
+      var e=b.getAttribute('data-estilo');
+      botoes.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});
+      turmas.forEach(function(t){
+        t.classList.toggle('apagada',e!=='todos'&&t.getAttribute('data-estilo')!==e);
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>
